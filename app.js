@@ -48,7 +48,7 @@ $( document ).ready(function() {
           "random": false,
           "anim": {
             "enable": true,
-            "speed": 0.2,
+            "speed": 0.6,
             "opacity_min": 0,
             "sync": false
           }
@@ -58,7 +58,7 @@ $( document ).ready(function() {
           "random": true,
           "anim": {
             "enable": true,
-            "speed": 2,
+            "speed": 8,
             "size_min": 0,
             "sync": false
           }
@@ -67,12 +67,12 @@ $( document ).ready(function() {
           "enable": false,
           "distance": 150,
           "color": "#ffffff",
-          "opacity": 0.4,
+          "opacity": 0.6,
           "width": 1
         },
         "move": {
           "enable": true,
-          "speed": 0.2,
+          "speed": 0.6,
           "direction": "none",
           "random": true,
           "straight": false,

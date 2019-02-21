@@ -9,6 +9,12 @@ li{
   font-size:20px;
 }
 
+canvas{
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+
 .sidenav {
   height: 100%;
   width: 12%;
@@ -94,7 +100,9 @@ canvas {
   margin: 0;
 
 }
-
+.bodyFont{
+  font-family: 'Arvo', serif;
+}
 .contentHeader{
   font-family: 'Arvo', serif;
   text-align: center;
