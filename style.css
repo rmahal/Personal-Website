@@ -15,16 +15,22 @@ body {
   margin: 0;
 }
 
+.bottomOfNav{
+  text-align: center;
+}
+
 .navName{
   margin: 0;
   padding-top: 20%;
   text-align: center;
   padding-bottom: 5%;
+  color: #8A746E;
 }
 
 .navTitle{
   text-align: center;
   padding-bottom: 20%;
+  color: #117F72;
 }
 
 .sidebar {
@@ -46,7 +52,7 @@ body {
 }
  
 .sidebar a.active {
-  background-color: #4CAF50;
+  background-color: #117F72;
   color: white;
 }
 
@@ -139,20 +145,121 @@ body {
   display: flex;
 }
 
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+
 }
 
-@media screen and (max-width: 400px) {
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.resumeContent{
+  position: relative;
+  left: 7.5%;
+  width: 75%;
+  margin-right: 0;
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #117F72;
+}
+
+.contactContainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.contactContent{
+  position: relative;
+  left: 10%;
+  width: 75%;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+  .sidebar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: auto;
+  }
   .sidebar a {
     text-align: center;
     float: none;
   }
+  .skillsImg{
+    margin: 0 auto;
+    max-height: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+  }
 }
+
+@media screen and (max-width: 400px) {
+  .sidebar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: auto;
+  }
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .skillsImg{
+    margin: 0 auto;
+    max-height: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+
+
+
+
