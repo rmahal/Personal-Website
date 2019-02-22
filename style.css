@@ -88,21 +88,37 @@ canvas {
   width: 100%;
   height: 100vh;
 }
-
-.bannerText{
+.bannerTextName{
   position: relative;
   top: 0;
-  font-size: 90px;
+  font-size: 52px;
   text-align: center;
   padding: 0 0 0 0;
   color: whitesmoke;
   top: 40%;
   margin: 0;
+}
 
+
+.bannerText{
+  position: relative;
+  top: 0;
+  font-size: 72px;
+  text-align: center;
+  padding: 0 0 0 0;
+  color: whitesmoke;
+  top: 40%;
+  margin: 0;
 }
 .bodyFont{
   font-family: 'Arvo', serif;
 }
+
+.navTextSize{
+  font-size: 20px;
+}
+
+
 .contentHeader{
   font-family: 'Arvo', serif;
   text-align: center;
