@@ -602,14 +602,23 @@ a:active {
 
 /* end of integration*/
 
-
+@media screen and (max-width: 1000px){
+  .skillsImg{
+    margin: 0 auto;
+    max-height: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
 
 @media screen and (max-width: 700px) {
   .sidebar{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     height: auto;
   }
   .sidebar a {
@@ -626,12 +635,12 @@ a:active {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .sidebar{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     height: auto;
   }
   .sidebar a {
@@ -640,7 +649,7 @@ a:active {
   }
   .skillsImg{
     margin: 0 auto;
-    max-height: 50px;
+    max-height: 40px;
     padding-bottom: 10px;
     text-align: center;
     vertical-align: middle;
@@ -649,6 +658,26 @@ a:active {
 }
 
 
-
+@media screen and (max-width: 375px) {
+  .sidebar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    height: auto;
+  }
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .skillsImg{
+    margin: 0 auto;
+    max-height: 35px;
+    padding-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
 
 
