@@ -672,7 +672,7 @@ a:active {
   .quote{
     position: relative;
     top: 10%;
-    left: 10%;
+    left: 0%;
     z-index: 1;
     color:white;
     text-shadow: 2px 2px #404040;
@@ -884,7 +884,7 @@ a:active {
   
   .quote{
     position: relative;
-    top: 10%;
+    top: 0%;
     left: 10%;
     z-index: 1;
     color:white;
