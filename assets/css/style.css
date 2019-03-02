@@ -11,6 +11,10 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
+.indexUp{
+  z-index: 2;
+}
+
 .topOfNav{
   top: 0;
   background-color: #FAFAFA;
