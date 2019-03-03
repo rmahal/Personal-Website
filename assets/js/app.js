@@ -15,21 +15,29 @@ $( document ).ready(function() {
         });
     });
 
-    $(function() {
-        $.getJSON('assets/jokes.json', function(data) {
-            console.log("DATA:")
-            console.log(data)
-            var len = data.jokes.length
-            var counter = Math.floor(Math.random() * len);
-            var elem = document.getElementsByClassName("quote");
-            function change() {
-                $(elem).fadeTo(10000, 0, function() {
-                    this.innerHTML = data.jokes[counter];
-                    counter = ++counter % len;
-                    $(this).fadeTo(10000, 1, change)
-                })
-            }
+     init();
 
+    function loadJSON(callback) {   
+
+        var xobj = new XMLHttpRequest();
+            xobj.overrideMimeType("application/json");
+        xobj.open('GET', 'assets/jokes.json', true);
+        xobj.onreadystatechange = function () {
+              if (xobj.readyState == 4 && xobj.status == "200") {
+                callback(xobj.responseText);
+              }
+        };
+        xobj.send(null);  
+     }
+
+     function init() {
+        loadJSON(function(response) {
+           var actual_JSON = JSON.parse(response);
+           console.log(actual_JSON)
         });
-    });
+       }
+
+
+
+
 })
