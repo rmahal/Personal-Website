@@ -1,13 +1,14 @@
 $( document ).ready(function() {
     console.log("Document ready")
 
-
+    //Defining smooth scrolling on anchor tags
     $('a[href^="#"]').on('click', function (e) {
+        //Prevents refresh
         e.preventDefault();
-
+        //Define target
         var target = this.hash,
             $target = $(target);
-
+        //Calls animate on the body and html
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top - 80
         }, 900, 'swing', function () {
@@ -15,8 +16,11 @@ $( document ).ready(function() {
         });
     });
 
-     init();
+    //Calls the init function
+    init();
 
+
+    //function to get and open the jokes json file to be read and handled
     function loadJSON(callback) {   
 
         var xobj = new XMLHttpRequest();
@@ -30,12 +34,13 @@ $( document ).ready(function() {
         xobj.send(null);  
      }
 
-     function init() {
+    //Function to parse json from the data file
+    function init() {
         loadJSON(function(response) {
-           var actual_JSON = JSON.parse(response);
-           console.log(actual_JSON)
+            var actual_JSON = JSON.parse(response);
+            console.log(actual_JSON)
         });
-       }
+    }
 
 
 
