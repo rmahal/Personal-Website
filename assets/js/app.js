@@ -43,6 +43,22 @@ $( document ).ready(function() {
     }
 
 
+    var text = ['"Knock knock. Race condition. Who\'s there?"','"What\'s the best part about TCP jokes? <br> I get to keep telling them until you get them."', '"How many programmers does it take to screw in a light bulb? <br> None. It\'s a hardware problem."','A guy walks into a bar and asks for 1.4 root beers. The bartender says \'I\'ll have to charge you extra, that\'s a root beer float\'. The guy says \'In that case, better make it a double.'];
+    var counter = 0;
+    var elem = document.getElementsByClassName("quote");
+
+    function change() {
+        $(elem).fadeTo(10000, 0, function() {
+            this.innerHTML = text[counter];
+            counter = ++counter % text.length;
+            $(this).fadeTo(10000, 1, change)
+        })
+    }
+
+    change()
+
+
+
 
 
 })
