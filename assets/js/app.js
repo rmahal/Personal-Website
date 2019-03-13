@@ -43,7 +43,8 @@ $( document ).ready(function() {
     }
 
 
-    var text = ['"Knock knock. Race condition. Who\'s there?"','"What\'s the best part about TCP jokes? <br> I get to keep telling them until you get them."', '"How many programmers does it take to screw in a light bulb? <br> None. It\'s a hardware problem."','A guy walks into a bar and asks for 1.4 root beers. The bartender says \'I\'ll have to charge you extra, that\'s a root beer float\'. The guy says \'In that case, better make it a double.'];
+    var text = ['"Knock knock. Race condition. Who\'s there?"','"What\'s the best part about TCP jokes? <br> I get to keep telling them until you get them."', '"How many programmers does it take to screw in a light bulb? <br> None. It\'s a hardware problem."','"A guy walks into a bar and asks for 1.4 root beers. The bartender says \'I\'ll have to charge you extra, that\'s a root beer float\'. The guy says \'In that case, better make it a double."','"Debugging: Removing the needles from the haystack.”',
+    '"There are only 10 kinds of people in this world: those who know binary and those who don\'t.”','"From the Random Shack Data Processing Dictionary: Endless Loop: n., see Loop, Endless. Loop, Endless: n., see Endless Loop."'];
     var counter = 0;
     var elem = document.getElementsByClassName("quote");
 
