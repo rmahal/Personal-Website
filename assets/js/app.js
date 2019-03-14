@@ -16,31 +16,47 @@ $( document ).ready(function() {
         });
     });
 
+    let url = 'https://rmahal.com/assets/jokes.json';
+
+    fetch(url)
+    .then(res => res.json())
+    .then((out) => {
+      console.log('Checkout this JSON! ', out);
+    })
+    .catch(err => { throw err });
+
+
+
+
+    // fetch('./assets/jokes.json')
+    // .then(response => response.json())
+    // .then(json => console.log(json));
+    // $.getJSON("./assets/jokes.json", function(json) {
+        // console.log("JSON:")
+        // console.log(json); // this will show the info it in firebug console
+    // });
+
     //Calls the init function
-    init();
-
-
+    // init();
     //function to get and open the jokes json file to be read and handled
-    function loadJSON(callback) {   
-
-        var xobj = new XMLHttpRequest();
-            xobj.overrideMimeType("application/json");
-        xobj.open('GET', 'assets/jokes.json', true);
-        xobj.onreadystatechange = function () {
-              if (xobj.readyState == 4 && xobj.status == "200") {
-                callback(xobj.responseText);
-              }
-        };
-        xobj.send(null);  
-     }
-
+    // function loadJSON(callback) {   
+    //     var xobj = new XMLHttpRequest();
+    //         xobj.overrideMimeType("application/json");
+    //     xobj.open('GET', './assets/jokes.json', true);
+    //     xobj.onreadystatechange = function () {
+    //           if (xobj.readyState == 4 && xobj.status == "200") {
+    //             callback(xobj.responseText);
+    //           }
+    //     };
+    //     xobj.send(null);  
+    //  }
     //Function to parse json from the data file
-    function init() {
-        loadJSON(function(response) {
-            var actual_JSON = JSON.parse(response);
-            console.log(actual_JSON)
-        });
-    }
+    // function init() {
+    //     loadJSON(function(response) {
+    //         var actual_JSON = JSON.parse(response);
+    //         console.log(actual_JSON)
+    //     });
+    // }
 
 
     var text = ['"Knock knock. Race condition. Who\'s there?"','"What\'s the best part about TCP jokes? <br> I get to keep telling them until you get them."', '"How many programmers does it take to screw in a light bulb? <br> None. It\'s a hardware problem."','"A guy walks into a bar and asks for 1.4 root beers. The bartender says \'I\'ll have to charge you extra, that\'s a root beer float\'. The guy says \'In that case, better make it a double."','"Debugging: Removing the needles from the haystack.”',
